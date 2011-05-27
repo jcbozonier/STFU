@@ -21,6 +21,9 @@ STFU has been built by combining STFU and VIM via command line. Building C# via 
 ## Testing
 In the immediate future I will add NUnit support out of the box (for all tests in the tests folder). In the medium term, I want to be able to use different testing frameworks.
 
+## Web Framework Compatibility
+Which one? The one that doesn't require Visual Studio and let's me STFU and get work done.
+
 ## Nuget Integration and Distribution
 Pull STFU from Nuget so it's easier to get. Of course STFU will be published to Nuget using STFU (Nuget publishing will come first).
 
