@@ -14,4 +14,4 @@ Written in C#, for C#.
 The product of an Alt.NET programmer crossing community lines to innovate.
 
 ## Tell Visual Studio to STFU
-STFU is has been built by combining STFU and VIM via command line. Building C# via the command line has never been this easy. Tell Visual Studio to STFU, it's time to code.
+STFU has been built by combining STFU and VIM via command line. Building C# via the command line has never been this easy. Tell Visual Studio to STFU, it's time to code.
