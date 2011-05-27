@@ -34,8 +34,12 @@ public static class Program
         break;
       case "build":
         Console.WriteLine("Starting build of main.cs");
+        var project_bin_path = @".\bin";
+        if(!Directory.Exists(project_bin_path))
+          Directory.CreateDirectory(project_bin_path);
+          
         var compilerPath = @"C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe";
-        var executable_path = @".\bin\stfu.exe";
+        var executable_path = Path.Combine(project_bin_path, "stfu.exe");
         var src = @".\src\main.cs";
         using (var compilerProcess = new Process())
         {
