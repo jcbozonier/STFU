@@ -15,3 +15,8 @@ The product of an Alt.NET programmer crossing community lines to innovate.
 
 ## Tell Visual Studio to STFU
 STFU has been built by combining STFU and VIM via command line. Building C# via the command line has never been this easy. Tell Visual Studio to STFU, it's time to code.
+
+# What's Next?
+
+## Testing
+In the immediate future I will add NUnit support out of the box (for all tests in the tests folder). In the medium term, I want to be able to use different testing frameworks.
