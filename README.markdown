@@ -1,13 +1,22 @@
 # STFU (formerly STFU and Code)
 tweet me: http://www.twitter.com/darkxanthos
 
-## Easily build C# without any editor what-so-ever
+I've been programming in Ruby for months now part time and recently started learning Clojure. Their workflows are extremely different from what I've been doing with C# for years. It's rocked my boat and helped me to see there is a better way. This is my attempt to bring a similar workflow to .NET.
+
+## Getting Started
 0. Download stfu.exe
 1. stfu install (remove the downloaded exe)
 2. stfu new your_project_name
 3. stfu build
 
 STFU! You're done.
+
+## Easily build C# without any editor what-so-ever
+The workflow I've been using while building STFU looks like this:
+1. Edit src/main.cs in vim
+2. Type :!stfu build
+4. Hit enter to flip back to code
+3. Run app and repeat as I build
 
 ## Built using STFU
 Written in C#, for C#. 
