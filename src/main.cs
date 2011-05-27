@@ -12,7 +12,12 @@ public static class Program
     {
       case "install":
         Console.WriteLine("installing stfu");
-
+        var install_path = @"C:\stfu";
+        var install_file_path = Path.Combine(install_path, "stfu.exe");
+        if(Directory.Exists(install_path))
+          Directory.Delete(install_path, true);
+        Directory.CreateDirectory(install_path);
+        File.Copy(@".\bin\stfu.exe", install_file_path);
         Console.WriteLine("stfu installed successfully");
         break;
       case "new":
