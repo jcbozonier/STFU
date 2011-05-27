@@ -1,4 +1,6 @@
 # STFU (formerly STFU and Code)
+tweet me: http://www.twitter.com/darkxanthos
+
 ## Easily build C# without any editor what-so-ever
 0. Download stfu.exe
 1. stfu install (remove the downloaded exe)
