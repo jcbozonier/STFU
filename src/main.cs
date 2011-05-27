@@ -18,6 +18,9 @@ public static class Program
           Directory.Delete(install_path, true);
         Directory.CreateDirectory(install_path);
         File.Copy(@".\bin\stfu.exe", install_file_path);
+        var path_value = System.Environment.GetEnvironmentVariable("Path");
+        if(!path_value.Contains(";" + install_file_path + ";"))
+          System.Environment.SetEnvironmentVariable("Path", path_value + ";" + install_path, EnvironmentVariableTarget.User);
         Console.WriteLine("stfu installed successfully");
         break;
       case "new":
