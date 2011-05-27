@@ -12,15 +12,7 @@ public static class Program
     {
       case "install":
         Console.WriteLine("installing stfu");
-        var install_path = @"C:\stfu";
-        var install_file_path = Path.Combine(install_path, "stfu.exe");
-        if(Directory.Exists(install_path))
-          Directory.Delete(install_path, true);
-        Directory.CreateDirectory(install_path);
-        File.Copy(@".\bin\stfu.exe", install_file_path);
-        var path_value = System.Environment.GetEnvironmentVariable("Path");
-        if(!path_value.Contains(";" + install_file_path + ";"))
-          System.Environment.SetEnvironmentVariable("Path", path_value + ";" + install_path, EnvironmentVariableTarget.User);
+        install_stfu();
         Console.WriteLine("stfu installed successfully");
         break;
       case "new":
@@ -70,6 +62,19 @@ public static class Program
         Console.WriteLine("I don't know command " + args[0]);
         break;
     }
+  }
+
+  public static void install_stfu()
+  {
+    var install_path = @"C:\stfu";
+    var install_file_path = Path.Combine(install_path, "stfu.exe");
+    if(Directory.Exists(install_path))
+      Directory.Delete(install_path, true);
+    Directory.CreateDirectory(install_path);
+    File.Copy(@".\bin\stfu.exe", install_file_path);
+    var path_value = System.Environment.GetEnvironmentVariable("Path");
+    if(!path_value.Contains(";" + install_file_path + ";"))
+      System.Environment.SetEnvironmentVariable("Path", path_value + ";" + install_path, EnvironmentVariableTarget.User);
 
   }
 }
