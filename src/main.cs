@@ -37,8 +37,10 @@ public static class Program
         var project_bin_path = @".\bin";
         if(!Directory.Exists(project_bin_path))
           Directory.CreateDirectory(project_bin_path);
-          
-        var compilerPath = @"C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe";
+        var windows_path = Environment.GetFolderPath(Environment.SpecialFolder.Windows);
+        Console.WriteLine(windows_path);
+        var compilerPath = Path.Combine(windows_path, @"Microsoft.NET\Framework\v4.0.30319\csc.exe");
+        Console.WriteLine("Compiling with " + compilerPath);
         var executable_path = Path.Combine(project_bin_path, "stfu.exe");
         var src = @".\src\main.cs";
         using (var compilerProcess = new Process())
